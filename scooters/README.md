@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+Javascript egzamino užduotis.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+“Kolt paspirtukų nuoma”
 
-## Available Scripts
+1. Užduoties sprendime reikia pademonstruoti visas technologijas, kurias išmokote kurso
+metu. Užduoties sprendime turi būti panaudotos sekančios technologijos: html, css
+(galima naudoti, bet neprivaloma sass, arba postcss arba bet kokį css karkasą
+bootstrap, tailwind ar panašų), serverio pusės javascript vykdymas node.js aplinkoje
+(galima, bet neprivaloma naudoti karkasą express.js, nest.js, sails.js ar panašų), kliento
+pusės javascript vykdymas naršyklėje būtinai panaudojant arba Angular karkasą arba
+React biblioteką ir duomenų saugojimui serverio pusėje panaudojant reliacinę duomenų
+bazę (MySQL arba MariaDB).
 
-In the project directory, you can run:
+2. Atlikite sekančias užduotis:
+Užduotis 1.
+Sukurkite duomenų bazės lentelę pagal schemą:
+Duomenų bazės pavadinimą sugalvokite patys. Jeigu reikia, duomenų bazės lentelę
+galite papildyti papildomais stulpeliais.
 
-### `npm start`
+Užduotis 2.
+Naudodami Angular karkasą arba React biblioteką sukurkite vieno puslapio aplikaciją
+(SPA), kurioje vartotojas galėtų atlikti pilną “Kolt” paspirtukų administravimą (CRUD).
+Kiekvienas paspirtukas turi turėti savo vizualiai atskirtą aprašą, kuriame būtų pateikta
+visa informaciją apie jį. Šalia turi būti mygtukas “Trinti”, kurį paspaudus atitinkamo
+paspirtuko įrašas būtų pašalinamas iš duomenų bazės. Šalia įrašo su paskutinio
+naudojimo data turi būti laukelis su naujos datos įvedimu. Šalia laukelio su paspirtuko
+rida (kilometrais) turi būti laukelis, kuriame galima būtų įvesti tos dienos paspirtuku
+nuvažiuotą atstumą. Per dieną nuvažiuoti kilometrai sumuojasi su bendru kiekiu ir suma
+įrašoma į duomenų bazę. Įrašas iš duomenų bazės laukelio is_busy turi būti
+paverčiamas į “užimtas” arba “laisvas”, priklausomai nuo laukelio reikšmės. Šalia šio
+laukelio turi būti checkbox tipo įvedimas, kuris leistų keisti užimtumą. Duomenų
+redagavimas turi būti atliekamas paspaudus “Redaguoti” mygtuką. Registracijos kodas
+(aštuoni raidiniai skaitiniai simboliai) neturi būti radaguotinas (įrašomas tik kuriant naują
+paspirtuką).
+Paspirtukų aprašo viršuje (arba apačioje) turi būti atvaizduota tuščia forma su naujam
+paspirtukui įvesti skirtais laukeliais ir mygtukas “Pridėti” formos vykdymui. Laukeliui
+is_busy skirto įvedimo, kuriant naują paspirtuką daryti nereikia, nes naujai sukurtas
+paspirtukas visada turi būti “laisvas”
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Užduotis 3.
+Serveryje sukurkite prisijungimą prie duomenų bazės, web serverį, maršrutizatorių ir visą
+bendravimo su naršykle logiką, užtikrinančią 2 užduoties įgyvendinimą serveryje.
+Informacijos apsikeitimas tarp serverio ir naršyklės turi vykti JSON formatu.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Užduotis 4.
+Sukurkite naršyklėje esančio javascript bendravimo mechanizmą su serveriu, naudojant
+atitinkamus užklausų metodus, asinchroniškai siunčiamus į serverį. Dinamiškai
+renderinkite vaizdą naudodami Angular ar React, pagal duomenis JSON formatu
+gaunamus iš serverio.
 
-### `npm test`
+Užduotis 5.
+Sukurkite statistikos laukelius, kuriuose būtų atvaizduojamas paspirtukų kiekis ir bendras
+visų paspirtukų nuvažiuotas kilometrų kiekis (duomenys gaunami iš serverio duomenų
+bazės) Keičiantis duomenų bazės įrašams automatiškai turi keistis ir statistika.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Užduotis 6.
+Sukurkite rūšiavimo galimybę pagal nuvažiuotų kilometrų kiekį ir paskutinio naudojimo
+datą (sukurkite du mygtukus, kuriuos paspaudus paspirtukų aprašai išsirikiuotų
+atitinkama tvarka). Tam panaudokite Angular ar React galimybes (ne serverio).
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+3. Aplikacija turi atrodyti estetiškai ir turi būti padaryta adaptyvaus dydžio (responsive).
+Galite prisidėti prie aplikacijos tobulinimo ir pridėti naujų, sąlygoje neaprašytų
+funkcionalumų ar vartotojo patirtį gerinančių patobulinimų. Papildomus dalykus užduotyje
+pridėkite tik tada, kai pilnai įvykdėte visas užduoti
