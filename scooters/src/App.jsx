@@ -125,7 +125,7 @@ function App() {
       <h1>Kolt paspirtukų nuoma </h1>
       <div className="reg-container">
         <h3>Naujas paspirtukas:</h3>
-        <Registration addScooter={addScooter} scooters={scooters}></Registration>
+        <Registration addScooter={addScooter}></Registration>
         <CountSorter sort={sort} sortFree={sortFree} sortBusy={sortBusy} scootersCount={scootersCount} scootersCountRide={scootersCountRide} scootersCountUssageFree={scootersCountUssageFree} scootersCountUssageBusy={scootersCountUssageBusy}></CountSorter>
       </div>
       <table>

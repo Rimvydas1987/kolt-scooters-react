@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Registration({ addScooter, scooters }) {
+function Registration({ addScooter }) {
     const [regCode, setRegCode] = useState('');
     const [milage, setMilage] = useState('0');
     const [date, setDate] = useState('');
