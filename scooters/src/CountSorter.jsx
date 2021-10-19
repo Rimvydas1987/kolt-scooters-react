@@ -3,7 +3,7 @@ function CountSorter({ sort, scootersCount, scootersCountRide }) {
   return (
     <>
       <div className="sort-conteiner">
-        <h4>Sort by</h4>
+        <h4>Rušiuoti pagal: </h4>
         <button className="btn-sort" type="button" onClick={() => sort('last_use_time')}>Paskutinį naudojimą</button>
         <button className="btn-sort" type="button" onClick={() => sort('total_ride_kilometres')}>Pagal nuvažiuotą atstumą</button>
       </div>
