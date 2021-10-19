@@ -87,7 +87,7 @@ app.put('/scooters/:id', (req, res) => {
 })
 
 
-// skaiciuoka irasus
+// skaiciuoka paspirtuku kieki
 app.get('/scooters/count', (req, res) => {
     con.query('SELECT COUNT(id) AS scootersCount FROM scooters', (err, results) => {
         if (err) {
@@ -97,8 +97,19 @@ app.get('/scooters/count', (req, res) => {
     })
 })
 
+//skaičiuoja bendra nuvaziuota atstuma
 app.get('/scooters/countRide', (req, res) => {
     con.query('SELECT SUM(total_ride_kilometres) AS scootersCountRide FROM scooters', (err, results) => {
+        if (err) {
+            throw err;
+        }
+        res.json(results);
+    })
+})
+
+//skaičiuoja laisvus paspirtukus
+app.get('/scooters/countUssageFree', (req, res) => {
+    con.query('SELECT COUNT(is_busy) AS scootersCountUssageFree FROM scooters WHERE is_busy=0', (err, results) => {
         if (err) {
             throw err;
         }

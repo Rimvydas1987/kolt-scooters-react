@@ -11,6 +11,7 @@ function App() {
   const [scooters, setScooters] = useState([]);
   const [scootersCount, setScootersCount] = useState(0);
   const [scootersCountRide, setScootersCountRide] = useState(0);
+  const [scootersCountUssageFree, setScootersCountUssageFree] = useState(0);
 
 
   useEffect(() => {
@@ -31,6 +32,13 @@ function App() {
     axios.get('http://localhost:3003/scooters/countRide')
       .then((response) => {
         setScootersCountRide(response.data[0].scootersCountRide);
+      })
+  }, [lastUpdate])
+
+  useEffect(() => {
+    axios.get('http://localhost:3003/scooters/countUssageFree')
+      .then((response) => {
+        setScootersCountUssageFree(response.data[0].scootersCountUssageFree);
       })
   }, [lastUpdate])
 
@@ -81,7 +89,7 @@ function App() {
       <div className="reg-container">
         <h3>Naujas paspirtukas:</h3>
         <Registration addScooter={addScooter}></Registration>
-        <CountSorter sort={sort} scootersCount={scootersCount} scootersCountRide={scootersCountRide}></CountSorter>
+        <CountSorter sort={sort} scootersCount={scootersCount} scootersCountRide={scootersCountRide} scootersCountUssageFree={scootersCountUssageFree}></CountSorter>
       </div>
       <table>
         <tbody>

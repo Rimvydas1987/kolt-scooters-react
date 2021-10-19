@@ -1,5 +1,5 @@
 
-function CountSorter({ sort, scootersCount, scootersCountRide }) {
+function CountSorter({ sort, scootersCount, scootersCountRide, scootersCountUssageFree }) {
   return (
     <>
       <div className="sort-conteiner">
@@ -11,6 +11,7 @@ function CountSorter({ sort, scootersCount, scootersCountRide }) {
         <h5>Statistika</h5>
         <h6>Viso paspirtukų: {scootersCount} </h6>
         <h6>Bendras nuvažiuotas atstumas: {scootersCountRide} km</h6>
+        <h6>Laisvi paspirtukai: {scootersCountUssageFree}</h6>
       </div>
     </>
   );
