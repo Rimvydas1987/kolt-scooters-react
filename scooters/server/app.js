@@ -117,6 +117,16 @@ app.get('/scooters/countUssageFree', (req, res) => {
     })
 })
 
+//skaičiuoja užimtus paspirtukus
+app.get('/scooters/countUssageBusy', (req, res) => {
+    con.query('SELECT COUNT(is_busy) AS scootersCountUssageBusy FROM scooters WHERE is_busy=1', (err, results) => {
+        if (err) {
+            throw err;
+        }
+        res.json(results);
+    })
+})
+
 
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
