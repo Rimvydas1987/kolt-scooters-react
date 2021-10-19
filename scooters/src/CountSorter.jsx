@@ -1,11 +1,13 @@
 
-function CountSorter({ sort, scootersCount, scootersCountRide, scootersCountUssageFree, scootersCountUssageBusy  }) {
+function CountSorter({ sort, sortFree, sortBusy, scootersCount, scootersCountRide, scootersCountUssageFree, scootersCountUssageBusy  }) {
   return (
     <>
       <div className="sort-conteiner">
         <h4>Rušiuoti pagal: </h4>
         <button className="btn-sort" type="button" onClick={() => sort('last_use_time')}>Paskutinį naudojimą</button>
         <button className="btn-sort" type="button" onClick={() => sort('total_ride_kilometres')}>Pagal nuvažiuotą atstumą</button>
+        <button className="btn-sort" type="button" onClick={() => sortFree()}>Pagal laivus paspirtukus</button>
+        <button className="btn-sort" type="button" onClick={() => sortBusy()}>Pagal užimtus paspirtukus</button>
       </div>
       <div className="statistics-conteiner">
         <h5>Statistika</h5>
