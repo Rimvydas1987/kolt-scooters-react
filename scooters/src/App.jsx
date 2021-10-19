@@ -10,6 +10,7 @@ function App() {
   const [lastUpdate, setLastUpdate] = useState(Date.now());//skaičiuoja pasikeitusius irašus, kad padarytu postu update.
   const [scooters, setScooters] = useState([]);
   const [scootersCount, setScootersCount] = useState(0);
+  const [scootersCountRide, setScootersCountRide] = useState(0);
 
 
   useEffect(() => {
@@ -23,6 +24,13 @@ function App() {
     axios.get('http://localhost:3003/scooters/count')
       .then((response) => {
         setScootersCount(response.data[0].scootersCount);
+      })
+  }, [lastUpdate])
+
+  useEffect(() => {
+    axios.get('http://localhost:3003/scooters/countRide')
+      .then((response) => {
+        setScootersCountRide(response.data[0].scootersCountRide);
       })
   }, [lastUpdate])
 
@@ -73,7 +81,7 @@ function App() {
       <div className="reg-container">
         <h3>Naujas paspirtukas:</h3>
         <Registration addScooter={addScooter}></Registration>
-        <CountSorter sort={sort} scootersCount={scootersCount}></CountSorter>
+        <CountSorter sort={sort} scootersCount={scootersCount} scootersCountRide={scootersCountRide}></CountSorter>
       </div>
       <table>
         <tbody>

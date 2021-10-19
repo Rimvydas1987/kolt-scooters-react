@@ -97,6 +97,15 @@ app.get('/scooters/count', (req, res) => {
     })
 })
 
+app.get('/scooters/countRide', (req, res) => {
+    con.query('SELECT SUM(total_ride_kilometres) AS scootersCountRide FROM scooters', (err, results) => {
+        if (err) {
+            throw err;
+        }
+        res.json(results);
+    })
+})
+
 
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
