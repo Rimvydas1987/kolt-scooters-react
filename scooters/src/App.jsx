@@ -87,17 +87,6 @@ function App() {
     if ('total_ride_kilometres' === by) {
       scootersCopy.sort((a, b) => a.total_ride_kilometres - b.total_ride_kilometres);
     }
-    if ('is_busy' === by){
-      scootersCopy.sort((a, b) => {
-        if (a.is_busy > b.is_busy) {
-          return 1
-        }
-        if (a.is_busy < b.is_busy) {
-          return -1
-        }
-          return 0
-      })
-    }
     setScooters(scootersCopy);
   }
 
@@ -131,15 +120,12 @@ function App() {
     setScooters(scootersCopy);
   }
 
-
-
-
   return (
     <>
       <h1>Kolt paspirtukų nuoma </h1>
       <div className="reg-container">
         <h3>Naujas paspirtukas:</h3>
-        <Registration addScooter={addScooter}></Registration>
+        <Registration addScooter={addScooter} scooters={scooters}></Registration>
         <CountSorter sort={sort} sortFree={sortFree} sortBusy={sortBusy} scootersCount={scootersCount} scootersCountRide={scootersCountRide} scootersCountUssageFree={scootersCountUssageFree} scootersCountUssageBusy={scootersCountUssageBusy}></CountSorter>
       </div>
       <table>
