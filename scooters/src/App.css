@@ -1,0 +1,130 @@
+body,
+body * {
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  box-sizing: border-box;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+h1 {
+  text-align: center;
+}
+.reg-container {
+  position: relative;
+  padding: 20px;
+  max-width: 765px;
+  text-align: center;
+  left: calc((100% - 765px) / 2);
+}
+h3 {
+  display: flex;
+  margin-bottom: 10px;
+}
+.reg-container > div:nth-child(2){
+  display: flex;
+}
+label {
+  padding: 5px;
+  line-height: 30px;
+  font-weight: bold;
+  font-style: italic;
+}
+.reg-container > div > div > input {
+  width: 120px;
+  height: 30px;
+  text-align: center;
+  border-radius: 5px;
+  border: solid 1px gray;
+}
+.sort-conteiner {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+.statistics-conteiner {
+  text-align: center;
+  padding: 5px;
+}
+h4 {
+  line-height: 50px;
+  margin-right: 10px;
+  font-size: 15px;
+}
+table {
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid grey;
+  border-top: 2px solid grey;
+  border-collapse: collapse;
+}
+.t-header {
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: gainsboro;
+  font-style: italic;
+}
+tr {
+  height: 30px;
+  text-align: center;
+}
+td {
+  width: 100px;
+  height: 50px;
+  font-family: initial;
+  padding: 5px 10px 5px 10px;
+  border-top:solid 1px gray;
+  vertical-align: middle;
+}
+td > input {
+  height: 25px;
+  width: 120px;
+  text-align: center;
+  float: right;
+}
+button {
+  width: 70px;
+  height: 30px;
+  border: solid 1px black;
+  border-radius: 5px;
+  cursor: pointer;
+  font-style: italic;
+  font-weight: bold;
+  outline: none;
+  color: white;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.479);
+}
+button:active {
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.479);
+  transform: translateY(4px);
+}
+.btn-delete {
+  background-color: #dc3545;
+}
+.btn-delete:hover {
+  background-color: #ac2634;
+
+}
+.btn-edit {
+  background-color: #28a745;
+}
+.btn-edit:hover {
+  background-color: #1b8634;
+}
+.btn-add {
+margin-left: 20px;
+background-color: rgb(75, 132, 238);
+width: 100px;
+}
+.btn-add:hover {
+  background-color: rgb(62, 111, 202);
+}
+.btn-sort {
+  background-color: gainsboro;
+  width: 150px;
+  height: 40px;
+  color: black;
+  margin: 5px;
+}
+.btn-sort:hover {
+  background-color: rgb(196, 193, 193);
+}
