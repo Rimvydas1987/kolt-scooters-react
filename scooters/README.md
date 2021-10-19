@@ -17,6 +17,14 @@ Sukurkite duomenų bazės lentelę pagal schemą:
 Duomenų bazės pavadinimą sugalvokite patys. Jeigu reikia, duomenų bazės lentelę
 galite papildyti papildomais stulpeliais.
 
+Duomenų bazės lentelė:
+id: init(11);
+registration_code: char(8);
+is_busy: tinyinit(1);
+last_use_time: date;
+total_ride_kilometres: decimal(6,2).
+
+
 Užduotis 2.
 Naudodami Angular karkasą arba React biblioteką sukurkite vieno puslapio aplikaciją
 (SPA), kurioje vartotojas galėtų atlikti pilną “Kolt” paspirtukų administravimą (CRUD).
