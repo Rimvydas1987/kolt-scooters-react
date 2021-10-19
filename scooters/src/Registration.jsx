@@ -5,19 +5,18 @@ function Registration({ addScooter }) {
     const [milage, setMilage] = useState('0');
     const [date, setDate] = useState('');
 
-    const control = (e, what) => {
-        switch (what) {
-            case 'reg':
-                setRegCode(e.target.value);
-                break;
-            case 'mile':
-                setMilage(e.target.value);
-                break;
-            case 'date':
-                setDate(e.target.value);
-                break;
-        }
+
+    const editRegCodeInputHandler = (e) => {
+        setRegCode(e.target.value)
     }
+    const editMilageInputHandler = (e) => {
+        setMilage(e.target.value)
+    }
+    const editDateInputHandler = (e) => {
+        setDate(e.target.value)
+    }
+
+
 
     const insert = () => {
         addScooter({
@@ -35,15 +34,15 @@ function Registration({ addScooter }) {
             <div>
                 <div>
                     <label>Registracijos kodas:</label>
-                    <input type="text" maxLength="8" onChange={(e) => control(e, 'reg')} value={regCode} />
+                    <input type="text" maxLength="8" onChange={editRegCodeInputHandler} value={regCode} />
                 </div>
                 <div>
                     <label>Rida:</label>
-                    <input type="number" onChange={(e) => control(e, 'mile')} value={milage} />
+                    <input type="number" onChange={editMilageInputHandler} value={milage} />
                 </div>
                 <div>
                     <label>Data:</label>
-                    <input type="date" onChange={(e) => control(e, 'date')} value={date} />
+                    <input type="date" onChange={editDateInputHandler} value={date} />
                 </div>
                 <button className="btn-add" onClick={insert}>Įvesti naują</button>
             </div>
