@@ -7,7 +7,7 @@ import CountSorter from "./CountSorter";
 
 function App() {
 
-  const [lastUpdate, setLastUpdate] = useState(Date.now());//skaičiuoja pasikeitusius irašus, kad padarytu postu update.
+  const [lastUpdate, setLastUpdate] = useState(Date.now()); //skaičiuoja pasikeitusius irašus, kad padarytu postu update.
   const [scooters, setScooters] = useState([]);
   const [scootersCount, setScootersCount] = useState(0);
   const [scootersCountRide, setScootersCountRide] = useState(0);
